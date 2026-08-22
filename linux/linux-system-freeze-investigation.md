@@ -144,6 +144,7 @@ File chooser closes / disappears
 cosmic-comp attempts texture import
         ↓
 DRM "import for wrong devices" failure
+```
 
 ## Additional Observations
 
@@ -170,11 +171,13 @@ Unconfirmed: whether this texture-import failure directly causes the complete de
 Unconfirmed: whether NVIDIA-specific behaviour contributes to the underlying failure.
 
 The distinction between a reproducible logged error and the root cause of the complete system freeze remains important.
+```
 - File/download operations now reproducibly trigger a COSMIC DRM texture-import failure.
 - The failure consistently follows `xdg-desktop-portal-cosmic` file-chooser activity.
 - Repeated events share the same 1280×800 AB24 buffer characteristics and DRM modifier.
 - This strengthens the COSMIC/Wayland compositor path as the primary investigation area.
 - A direct causal link between this error and the complete desktop freezes has not yet been established.
+```
 
 ## Troubleshooting Methodology
 
@@ -200,4 +203,4 @@ Change one variable
 Attempt reproduction
       ↓
 Compare behaviour and logs
-
+```
