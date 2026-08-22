@@ -150,11 +150,11 @@ DRM "import for wrong devices" failure
 
 Other recurring messages were also observed during normal desktop use, including:
 
-surface missing from known popups
-COSMIC AppList process/cgroup warnings
-X11 event handling failures associated with some XWayland applications
-COSMIC Files theme-configuration errors
-WirePlumber warnings relating to processes that no longer existed
+- surface missing from known popups
+- COSMIC AppList process/cgroup warnings
+- X11 event handling failures associated with some XWayland applications
+- COSMIC Files theme-configuration errors
+- WirePlumber warnings relating to processes that no longer existed
 
 These have been recorded but are currently treated as secondary observations because they do not correlate with the reproducible file-chooser failure as consistently.
 
@@ -171,13 +171,12 @@ Unconfirmed: whether this texture-import failure directly causes the complete de
 Unconfirmed: whether NVIDIA-specific behaviour contributes to the underlying failure.
 
 The distinction between a reproducible logged error and the root cause of the complete system freeze remains important.
-```
+
 - File/download operations now reproducibly trigger a COSMIC DRM texture-import failure.
 - The failure consistently follows `xdg-desktop-portal-cosmic` file-chooser activity.
 - Repeated events share the same 1280×800 AB24 buffer characteristics and DRM modifier.
 - This strengthens the COSMIC/Wayland compositor path as the primary investigation area.
 - A direct causal link between this error and the complete desktop freezes has not yet been established.
-```
 
 ## Troubleshooting Methodology
 
