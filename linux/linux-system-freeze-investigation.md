@@ -95,11 +95,49 @@ This remains a hypothesis rather than a confirmed causal sequence.
 
 ## Live Monitoring
 
-To improve the quality of evidence during future incidents, I began monitoring relevant system logs live while using the desktop normally.
+## Repeated File-Chooser Reproduction
 
-The objective is to capture events as the slowdown begins rather than relying entirely on retrospective examination after rebooting.
+Continued live monitoring produced a more reproducible pattern during file downloads and save operations.
 
-This allows observed user behaviour and system events to be compared chronologically.
+Across multiple separate file downloads, the following sequence was observed:
+
+1. A file chooser or download operation was initiated.
+2. `xdg-desktop-portal-cosmic` generated Wayland/file-chooser warnings.
+3. The portal reported that the relevant file chooser dialog ID was no longer available.
+4. `cosmic-comp` immediately logged a DRM texture-import failure:
+
+`Failed to render texture ... import for wrong devices`
+
+The repeated failures shared the same significant characteristics:
+
+- Buffer size: `1280 × 800`
+- Pixel format: `AB24`
+- DRM render node involved
+- Same DRM buffer modifier across repeated events
+- Immediate timing correlation with COSMIC file-chooser activity
+
+The sequence was reproduced during several separate CV downloads and again during an unrelated file download.
+
+This substantially increases confidence that the event is reproducible rather than an isolated graphics warning.
+
+## Revised Working Hypothesis
+
+Earlier investigation concentrated broadly on the NVIDIA graphics stack and COSMIC compositor behaviour.
+
+The repeated file-download tests now provide a more specific investigation path:
+
+```text
+File/download operation
+        ↓
+xdg-desktop-portal-cosmic
+        ↓
+Wayland file-chooser activity
+        ↓
+File chooser closes / disappears
+        ↓
+cosmic-comp attempts texture import
+        ↓
+DRM "import for wrong devices" failure
 
 ## Troubleshooting Methodology
 
