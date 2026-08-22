@@ -164,11 +164,11 @@ The investigation has progressed from a broad graphical instability problem to a
 
 Current confidence:
 
-High: file/download operations can reproduce the COSMIC texture-import warning.
-High: the same buffer characteristics recur across those events.
-Moderate: the failure originates within the COSMIC/Wayland portal/compositor path.
-Unconfirmed: whether this texture-import failure directly causes the complete desktop freezes.
-Unconfirmed: whether NVIDIA-specific behaviour contributes to the underlying failure.
+- High: file/download operations can reproduce the COSMIC texture-import warning.
+- High: the same buffer characteristics recur across those events.
+- Moderate: the failure originates within the COSMIC/Wayland portal/compositor path.
+- Unconfirmed: whether this texture-import failure directly causes the complete desktop freezes.
+- Unconfirmed: whether NVIDIA-specific behaviour contributes to the underlying failure.
 
 The distinction between a reproducible logged error and the root cause of the complete system freeze remains important.
 
