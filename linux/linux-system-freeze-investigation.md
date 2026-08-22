@@ -95,6 +95,12 @@ This remains a hypothesis rather than a confirmed causal sequence.
 
 ## Live Monitoring
 
+To improve the quality of evidence during future incidents, I began monitoring relevant system logs live while using the desktop normally.
+
+The objective is to capture events as the slowdown begins rather than relying entirely on retrospective examination after rebooting.
+
+This allows observed user behaviour and system events to be compared chronologically.
+
 ## Repeated File-Chooser Reproduction
 
 Continued live monitoring produced a more reproducible pattern during file downloads and save operations.
@@ -139,6 +145,37 @@ cosmic-comp attempts texture import
         ↓
 DRM "import for wrong devices" failure
 
+## Additional Observations
+
+Other recurring messages were also observed during normal desktop use, including:
+
+surface missing from known popups
+COSMIC AppList process/cgroup warnings
+X11 event handling failures associated with some XWayland applications
+COSMIC Files theme-configuration errors
+WirePlumber warnings relating to processes that no longer existed
+
+These have been recorded but are currently treated as secondary observations because they do not correlate with the reproducible file-chooser failure as consistently.
+
+## Current Assessment
+
+The investigation has progressed from a broad graphical instability problem to a repeatable compositor event associated with file-chooser activity.
+
+Current confidence:
+
+High: file/download operations can reproduce the COSMIC texture-import warning.
+High: the same buffer characteristics recur across those events.
+Moderate: the failure originates within the COSMIC/Wayland portal/compositor path.
+Unconfirmed: whether this texture-import failure directly causes the complete desktop freezes.
+Unconfirmed: whether NVIDIA-specific behaviour contributes to the underlying failure.
+
+The distinction between a reproducible logged error and the root cause of the complete system freeze remains important.
+- File/download operations now reproducibly trigger a COSMIC DRM texture-import failure.
+- The failure consistently follows `xdg-desktop-portal-cosmic` file-chooser activity.
+- Repeated events share the same 1280×800 AB24 buffer characteristics and DRM modifier.
+- This strengthens the COSMIC/Wayland compositor path as the primary investigation area.
+- A direct causal link between this error and the complete desktop freezes has not yet been established.
+
 ## Troubleshooting Methodology
 
 The investigation currently follows this process:
@@ -163,3 +200,4 @@ Change one variable
 Attempt reproduction
       ↓
 Compare behaviour and logs
+
