@@ -27,11 +27,11 @@ Material is organised primarily by technical topic rather than training platform
 ```text
 cybersecurity-labs/
 ├── README.md
-├── linux/
-├── methodology/
-├── networking/
-├── reconnaissance/
-└── web-security/
+├── linux/              # Host investigation and Linux case studies
+├── methodology/        # Reusable investigation approaches
+├── networking/         # Networking and enumeration fundamentals
+├── reconnaissance/     # Authorised reconnaissance methodology
+└── web-security/       # Web technologies and security concepts
 ```
 
 As my practical knowledge grows, additional topic areas will be added where they provide useful technical evidence rather than simply recording completed rooms or courses.
@@ -42,14 +42,12 @@ As my practical knowledge grows, additional topic areas will be added where they
 
 Linux investigation, troubleshooting and security concepts developed through daily Linux use and dedicated practical study.
 
-Current and developing areas include:
+Current material:
 
-- System and log investigation
-- Process analysis
-- Filesystem analysis
-- Permissions and ownership
-- System hardening
-- Linux privilege-escalation fundamentals
+- [Linux Filesystem Analysis](linux/linux-filesystem-analysis.md) — trusted tooling, targeted searches, metadata, timestamps and hashing
+- [Linux Process Analysis](linux/linux-process-analysis.md) — process snapshots, lineage, open resources, services and persistence
+- [Linux Incident Triage](linux/linux-incident-triage.md) — log sources, authentication, scheduled tasks, application artefacts and evidence correlation
+- [Linux System Freeze Investigation](linux/linux-system-freeze-investigation.md) — an evidence-led troubleshooting case study involving desktop and graphics instability
 
 ### Networking
 
