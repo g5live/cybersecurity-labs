@@ -1,146 +1,99 @@
 # Cybersecurity Labs
 
-Practical cybersecurity notes, methodology and technical investigation from my ongoing development toward **offensive security and penetration testing**.
+A curated record of practical cybersecurity methodology, investigation and lessons learned as I develop toward **offensive security and penetration testing**.
 
-This repository documents how my understanding develops through hands-on labs, Linux use, networking study, troubleshooting and authorised security training.
+This repository connects Security+ and networking foundations with daily Linux use and authorised hands-on labs. It is not a mirror of all my private study notes or a collection of room solutions; material is included when it demonstrates a reusable process, useful evidence or a meaningful change in understanding.
 
-The aim is to demonstrate **methodology, interpretation and lessons learned** rather than provide step-by-step solutions to training environments.
+## Where This Fits
 
-## Current Areas of Focus
+```text
+Security+ and networking concepts
+                ↓
+Controlled labs and system investigation
+                ↓
+Evidence, interpretation and repeatable methodology
+                ↓
+Python security projects and deeper practical work
+                ↓
+PEN-200 and OSCP preparation
+```
 
-- Network reconnaissance and enumeration
-- Nmap scanning and interpretation
-- Networking fundamentals
-- Linux systems and command-line investigation
-- Linux process and filesystem analysis
-- Linux security and system hardening
-- Windows and Linux privilege-escalation concepts
-- Web security fundamentals
-- Vulnerability identification
-- Introductory exploitation and post-exploitation concepts
-- Structured troubleshooting and technical investigation
+The current focus is on Linux investigation, reconnaissance, network enumeration, web-security fundamentals and disciplined troubleshooting.
+
+## Start Here
+
+- [Enumeration Methodology](methodology/enumeration-methodology.md) — deciding what to test next from the evidence already collected.
+- [Nmap Methodology](reconnaissance/nmap-methodology.md) — staged host, port, service and script scanning in authorised environments.
+- [Network Enumeration Basics](networking/network-enumeration-basics.md) — connecting addresses, ports, protocols and services.
+- [Web Security Fundamentals](web-security/web-security-fundamentals.md) — the request-and-response model behind later web testing.
+- [Linux Incident Triage](linux/linux-incident-triage.md) — correlating logs, authentication, scheduled tasks and application artefacts.
 
 ## Repository Structure
 
-Material is organised primarily by technical topic rather than training platform.
+Material is organised by reusable technical topic rather than by training platform:
 
 ```text
 cybersecurity-labs/
-├── README.md
 ├── linux/              # Host investigation and Linux case studies
 ├── methodology/        # Reusable investigation approaches
-├── networking/         # Networking and enumeration fundamentals
+├── networking/         # Networking and enumeration foundations
 ├── reconnaissance/     # Authorised reconnaissance methodology
 └── web-security/       # Web technologies and security concepts
 ```
 
-As my practical knowledge grows, additional topic areas will be added where they provide useful technical evidence rather than simply recording completed rooms or courses.
+### Linux Investigation
 
-## Current Content
+- [Linux Filesystem Analysis](linux/linux-filesystem-analysis.md) — targeted searches, metadata, timestamps, hashing and trusted tooling.
+- [Linux Process Analysis](linux/linux-process-analysis.md) — process snapshots, lineage, open resources, services and persistence.
+- [Linux Incident Triage](linux/linux-incident-triage.md) — log sources, authentication events, scheduled tasks and evidence correlation.
+- [Linux System Freeze Investigation](linux/linux-system-freeze-investigation.md) — an evidence-led troubleshooting case study involving desktop and graphics instability.
 
-### Linux
+### Methodology and Reconnaissance
 
-Linux investigation, troubleshooting and security concepts developed through daily Linux use and dedicated practical study.
+- [Enumeration Methodology](methodology/enumeration-methodology.md) — a reusable observe, interpret and investigate-next workflow.
+- [Troubleshooting Methodology](methodology/troubleshooting-methodology.md) — narrowing faults through hypotheses and controlled checks.
+- [Nmap Methodology](reconnaissance/nmap-methodology.md) — progressive reconnaissance without treating scanner output as a conclusion.
 
-Current material:
+### Networking and Web Security
 
-- [Linux Filesystem Analysis](linux/linux-filesystem-analysis.md) — trusted tooling, targeted searches, metadata, timestamps and hashing
-- [Linux Process Analysis](linux/linux-process-analysis.md) — process snapshots, lineage, open resources, services and persistence
-- [Linux Incident Triage](linux/linux-incident-triage.md) — log sources, authentication, scheduled tasks, application artefacts and evidence correlation
-- [Linux System Freeze Investigation](linux/linux-system-freeze-investigation.md) — an evidence-led troubleshooting case study involving desktop and graphics instability
+- [Network Enumeration Basics](networking/network-enumeration-basics.md) — core network observations that support service enumeration.
+- [Web Security Fundamentals](web-security/web-security-fundamentals.md) — HTTP concepts, attack surface and introductory testing logic.
 
-### Networking
+## Learning and Documentation Approach
 
-Networking concepts used to support reconnaissance, enumeration and security analysis.
-
-Current and developing areas include:
-
-- TCP/IP fundamentals
-- Network enumeration
-- Ports and services
-- Addressing and routing concepts
-- Network troubleshooting
-- Networking knowledge supporting CCNA study
-
-### Reconnaissance
-
-Methodology for understanding and investigating authorised targets.
-
-Current areas include:
-
-- Nmap methodology
-- Host and service discovery
-- Port scanning
-- Service and version identification
-- Enumeration strategy
-- Interpreting reconnaissance results
-
-### Web Security
-
-Developing understanding of web technologies and common security concepts.
-
-Current areas include:
-
-- HTTP fundamentals
-- Web reconnaissance
-- Security headers
-- Application and service identification
-- Basic web-security methodology
-
-### Methodology
-
-Structured approaches used across technical investigation and practical security work.
-
-Current areas include:
-
-- Enumeration methodology
-- Troubleshooting methodology
-- Observation and hypothesis-led investigation
-- Choosing tools based on findings rather than habit
-
-## Learning Approach
-
-My current learning framework is:
+My working cycle is:
 
 **Learn → Observe → Practise → Reinforce → Checkpoint**
 
-For each technical area, I aim to move beyond simply recognising commands or tools and toward being able to:
+Where appropriate, each published note answers six questions:
 
-1. Recognise the situation.
-2. Identify the relevant concept or tool.
-3. Choose an appropriate approach.
-4. Interpret the result.
-5. Decide what to investigate next.
+1. **Objective** — what am I trying to understand or investigate?
+2. **Method** — why is this approach appropriate?
+3. **Evidence** — what did the system or tool actually show?
+4. **Interpretation** — what can and cannot be concluded from it?
+5. **Next step** — which follow-up action does the evidence support?
+6. **Lessons learned** — what would I repeat, change or verify next time?
 
-## Documentation Approach
+> Tool output is evidence, not a verdict. A discovered service, unusual process or missing header is a reason to investigate further, not automatic proof of compromise or vulnerability.
 
-Where appropriate, notes are structured around:
+For example, a port that does not answer may be closed, filtered or excluded by the scan method. A process name alone can also look suspicious without being malicious; its parent, executable path, user, open files and network activity provide the context needed to judge it.
 
-1. **Objective** — what I was trying to understand or investigate.
-2. **Methodology** — how I approached the problem.
-3. **Tools** — what I used and why.
-4. **Observations** — what the output indicated.
-5. **Interpretation** — what I believed the result meant.
-6. **Lessons learned** — what I would repeat or change next time.
+## Related Projects
 
-Sensitive information, credentials, flags and direct solutions to active training challenges are not published.
+- [Recon Helper](https://github.com/g5live/recon-helper) applies early DNS, TCP and HTTP checks in a small Python workflow.
+- [Security Command Lab](https://github.com/g5live/security-command-lab) turns security commands and concepts into timed practical questions.
 
-## Current Training
+These projects complement the notes: the labs develop the reasoning, while the applications reinforce Python and make that reasoning repeatable.
 
-My practical development currently includes:
+## Current Development Direction
 
-- TryHackMe PenTest+ pathway
-- Linux security and system-analysis labs
-- Networking study supporting future CCNA preparation
-- CompTIA Security+ topic development
-- Independent Linux use and system investigation
-- Python development through cybersecurity-focused CLI projects
+- Extend practical coverage without publishing flags or full walkthroughs.
+- Add concise lab evidence where it demonstrates a transferable technique.
+- Strengthen the connection between Security+, CCNA-level networking and practical investigation.
+- Progress from isolated commands toward complete reconnaissance, enumeration and validation workflows.
+- Continue Python and OOP development through small, explainable security projects.
 
-## Direction
-
-This repository will continue to develop as my practical capability grows.
-
-The focus is not on collecting tools or completed rooms, but on demonstrating increasing technical understanding, stronger methodology and the ability to connect concepts across Linux, networking, web security and offensive-security fundamentals.
+Sensitive information, credentials, flags and direct solutions to active training challenges are not published. All testing is limited to systems I own or environments where I have explicit permission.
 
 ---
 
