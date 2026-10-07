@@ -8,6 +8,7 @@ A practical record of what I'm learning as I work towards penetration testing an
 
 | Area | Notes |
 |---|---|
+| G5Labs | [My Windows and Linux lesson designs](G5Labs/README.md): workbooks, walkthroughs and current validation status |
 | Method | [Enumeration](methodology/enumeration-methodology.md) · [Troubleshooting](methodology/troubleshooting-methodology.md) |
 | Reconnaissance | [Nmap methodology](reconnaissance/nmap-methodology.md) |
 | Networking | [Network enumeration basics](networking/network-enumeration-basics.md) |
@@ -15,13 +16,13 @@ A practical record of what I'm learning as I work towards penetration testing an
 | Linux | [Filesystem analysis](linux/linux-filesystem-analysis.md) · [Processes](linux/linux-process-analysis.md) · [Incident triage](linux/linux-incident-triage.md) |
 | Case study | [System freeze investigation](linux/linux-system-freeze-investigation.md) |
 
-The current collection covers these introductory methods and investigations. Material is organised by reusable topic, rather than training-room answers.
+The current collection covers these introductory methods and investigations. Reusable methods are organised by topic. G5Labs adds my own exercise designs, with separate workbooks and walkthroughs.
 
 ## How I record a lab
 
 Each useful record explains the objective, chosen method, observed evidence, what it supports, the next step and lessons learned. An unusual process, open service or missing header needs context before drawing a conclusion.
 
-Testing stays within systems I own or authorised training environments. Credentials, flags and full solutions to active training challenges are not published.
+Testing stays within systems I own or authorised training environments. Third-party training answers and personal credentials are not published. G5Labs uses synthetic accounts and flags from my own home-lab designs, with solutions clearly marked.
 
 ## Related tools
 
