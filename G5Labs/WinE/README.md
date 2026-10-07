@@ -30,7 +30,7 @@
 |Supplied account check|`svc_backup` authenticated to SMB; `PublicBackup` listed and both Flag 1/2 files downloaded/read successfully|
 |User check|I can reach WinE through Kali; this does not yet verify every objective|
 |Restore point|`WinE_v1_Ready` exists|
-|Still to validate|WinRM from Kali, supplied account access, staged hash/account match, service trigger and final privileged identity|
+|Still to validate|WinRM from Kali, account access through WinRM, staged hash/account match, service trigger and final privileged identity|
 
 Kali also has a separate default/NAT interface. The target has only its CyberLab interface; the network has no forwarding configured. These checks did not change guest services, files, firewall rules or snapshots.
 
@@ -58,7 +58,7 @@ For my v1 setup, the supplied SMB account is `svc_backup`, with the synthetic pa
 
 ## Run, Record, Reset
 
-1. Confirm the baseline and addresses; use the supplied starting credential below.
+1. Confirm the baseline and addresses; use the supplied starting credential above.
 2. Work through [WinE v1 - Workbook](v1-workbook.md) and record output before looking at answers.
 3. After each account change, record identity, groups, relevant permissions and the action proving access.
 4. Keep a note of modified files or triggers; restore `WinE_v1_Ready` through the VM manager before a fresh repeat. Restoring discards subsequent changes.
