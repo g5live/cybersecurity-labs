@@ -8,6 +8,7 @@ A practical record of what I'm learning as I work towards penetration testing an
 
 | Area | Notes |
 |---|---|
+| Cheatsheets | [Five downloadable field references](cheatsheets/README.md): Bash/Vim, Python, Windows, reconnaissance and SQL injection/SQLMap |
 | G5Labs | [My Windows and Linux lesson designs](G5Labs/README.md): workbooks, walkthroughs and current validation status |
 | Method | [Enumeration](methodology/enumeration-methodology.md) · [Troubleshooting](methodology/troubleshooting-methodology.md) |
 | Reconnaissance | [Nmap methodology](reconnaissance/nmap-methodology.md) |
@@ -16,7 +17,7 @@ A practical record of what I'm learning as I work towards penetration testing an
 | Linux | [Filesystem analysis](linux/linux-filesystem-analysis.md) · [Processes](linux/linux-process-analysis.md) · [Incident triage](linux/linux-incident-triage.md) |
 | Case study | [System freeze investigation](linux/linux-system-freeze-investigation.md) |
 
-The current collection covers these introductory methods and investigations. Reusable methods are organised by topic. G5Labs adds my own exercise designs, with separate workbooks and walkthroughs.
+The current collection covers introductory methods, investigations and printable reference sheets. Reusable methods are organised by topic. G5Labs adds my own exercise designs, with separate workbooks and walkthroughs.
 
 ## How I record a lab
 
@@ -26,9 +27,11 @@ Testing stays within systems I own or authorised training environments. Third-pa
 
 ## Related tools
 
-- [Recon Helper](https://github.com/g5live/recon-helper): TCP checks, banner clues, optional HTTP/TLS inspection and saved findings.
-- [Cyber Skills Pathway](https://github.com/g5live/cyber-skills-pathway): concept-led lessons and short recall sessions across nine topics.
-- [Crypto Lab Tool](https://github.com/g5live/crypto-lab-tool): offline cryptography exercises and file hashing.
+- [Recon Helper](https://github.com/g5live/recon-helper): TCP checks, banner clues, optional HTTP/TLS inspection, plain-English explanations and saved partial findings.
+- [Cyber Skills Pathway](https://github.com/g5live/cyber-skills-pathway): 175 lessons across ten pathways, adaptive notebook presentation and optional AI tutoring.
+- [Crypto Lab Tool](https://github.com/g5live/crypto-lab-tool): offline cryptography exercises, adjustable XOR practice and file hashing.
+
+- [Subnet Calculator](https://github.com/g5live/subnet-calculator): IPv4 working and equal-sized network splitting with explained steps.
 
 ## Next steps
 
