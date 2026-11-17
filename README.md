@@ -27,11 +27,10 @@ Testing stays within systems I own or authorised training environments. Third-pa
 
 ## Related tools
 
-- [Recon Helper](https://github.com/g5live/recon-helper): TCP checks, banner clues, optional HTTP/TLS inspection, plain-English explanations and saved partial findings.
-- [Cyber Skills Pathway](https://github.com/g5live/cyber-skills-pathway): 175 lessons across ten pathways, adaptive notebook presentation and optional AI tutoring.
+- [Recon Helper](https://github.com/g5live/recon-helper): TCP and UDP checks, verified TLS and SMTP STARTTLS, and offline comparison of saved scans.
+- [Cyber Skills Pathway](https://github.com/g5live/cyber-skills-pathway): 279 lessons with Security+ and CCNA objective maps, delayed recall and simulated practical exercises. Runs locally.
 - [Crypto Lab Tool](https://github.com/g5live/crypto-lab-tool): offline cryptography exercises, adjustable XOR practice and file hashing.
-
-- [Subnet Calculator](https://github.com/g5live/subnet-calculator): IPv4 working and equal-sized network splitting with explained steps.
+- [Subnet Calculator](https://github.com/g5live/subnet-calculator): IPv4 and IPv6 calculations and network splitting, plus 36 guided IPv4 practice scenarios.
 
 ## Next steps
 
